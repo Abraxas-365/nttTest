@@ -3,7 +3,6 @@ import { FechasService } from "./fechas.service";
 export function sumarSaldos(this: FechasService): number {
     const fechas = this.fechasRepo.getFechas();
 
-    console.log(fechas);
     let sum = 0;
     for (let i = 0; i < fechas.length; i++) {
         if (typeof fechas[i].saldoAntiguo === "number") {
