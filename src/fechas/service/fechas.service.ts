@@ -5,7 +5,7 @@ import { ordernarFechas } from './ordenarFechas';
 import { sumarSaldos } from './sumarSaldos';
 
 export interface IFechasService {
-    ordenarFechas(orden: 'acentente' | 'decentente'): Array<IFecha>;
+    ordenarFechas(orden: 'acentente' | 'decendente'): Array<IFecha>;
     sumarSaldos(): number;
 }
 
