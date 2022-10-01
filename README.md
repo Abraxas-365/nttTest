@@ -26,6 +26,12 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Routes
+
+"/fechas/sumsaldos"
+"/fechas/decendente"
+"/fechas/acendente"
+
 ## Installation
 
 ```bash
