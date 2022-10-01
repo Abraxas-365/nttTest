@@ -1,4 +1,5 @@
-import { Controller, Get, Inject } from '@nestjs/common';
+import { Controller, Get, Inject, Res } from '@nestjs/common';
+import { Response } from 'express';
 import { IFechasService } from 'src/fechas/service/fechas.service';
 
 @Controller('fechas')
@@ -6,18 +7,19 @@ export class FechasController {
     constructor(@Inject(IFechasService) protected fechasService: IFechasService) {
     }
     @Get('acendente')
-    getFechasAcendente() {
-        return this.fechasService.ordenarFechas('acentente');
+    getFechasAcendente(@Res() res: Response) {
+        res.status(200).json(this.fechasService.ordenarFechas('acentente'))
+
     }
 
     @Get('decentente')
-    getFechasDecentente() {
-        return this.fechasService.ordenarFechas('decentente');
+    getFechasDecentente(@Res() res: Response) {
+        res.status(200).json(this.fechasService.ordenarFechas('decentente'));
     }
 
     @Get('sumsaldos')
-    getSumSaldos() {
-        return { suma: this.fechasService.sumarSaldos() };
+    getSumSaldos(@Res() res: Response) {
+        res.status(200).json({ suma: this.fechasService.sumarSaldos() });
 
     }
 
