@@ -12,9 +12,9 @@ export class FechasController {
 
     }
 
-    @Get('decentente')
+    @Get('decendente')
     getFechasDecentente(@Res() res: Response) {
-        res.status(200).json(this.fechasService.ordenarFechas('decentente'));
+        res.status(200).json(this.fechasService.ordenarFechas('decendente'));
     }
 
     @Get('sumsaldos')
